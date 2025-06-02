@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Clientes</title>
+</head>
+<body>
+  <h2>Registrar Cliente</h2>
+  <form method="POST">
+    ID: <input name="id"><br>
+    Nombre: <input name="nombre"><br>
+    Correo: <input name="correo"><br>
+    Matrícula: <input name="matricula"><br>
+    <button type="submit">Guardar</button>
+  </form>
+  <hr>
+  <h3>Clientes registrados:</h3>
+  <ul>
+    {% for c in clientes %}
+      <li>{{ c.id }} - {{ c.nombre }} - {{ c.correo }} - {{ c.matricula }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
