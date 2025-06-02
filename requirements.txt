@@ -1,3 +1,4 @@
 flask
 pymongo
 azure-identity
+pymongo-auth-aws
