@@ -39,9 +39,9 @@ def index():
     try:
         print("[INFO] Entrando a ruta /")
         collection = get_collection()
-        if not collection:
-            print("[ERROR] Colección no disponible.")
+        if collection is None:
             return "Error conectando a la base de datos.", 500
+
 
         if request.method == "POST":
             print("[INFO] Recibida solicitud POST con data:", request.form.to_dict())
